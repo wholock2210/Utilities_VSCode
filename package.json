@@ -1,0 +1,99 @@
+{
+  "name": "wholock-utilities",
+  "displayName": "WholockUtilities",
+  "description": "Split C# strings automatically, exit string by pressing Tab like vs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:csharp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "Wholock-Utilities.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "Wholock-Utilities.smartTab",
+        "title": "pressing Tab to exit string"
+      },
+      {
+        "command": "Wholock-Utilities.endLineFaster",
+        "title": "pressing ; to end line faster"
+      },
+      {
+        "command": "Wholock-Utilities.uppercaseString",
+        "title": "convert all letters to uppercase"
+      },
+      {
+        "command": "Wholock-Utilities.lowercaseString",
+        "title": "convert all letters to lowercase"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "Wholock-Utilities.smartTab",
+        "key": "tab",
+        "when": "editorTextFocus && editorLangId == csharp"
+      },
+      {
+        "command": "Wholock-Utilities.endLineFaster",
+        "key": ";",
+        "when": "editorTextFocus && editorLangId == csharp"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "Wholock-Utilities.Utilities",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        }
+      ],
+      "Wholock-Utilities.Utilities":[
+        {
+          "command": "Wholock-Utilities.uppercaseString",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        },
+        {
+          "command": "Wholock-Utilities.lowercaseString",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "Wholock-Utilities.Utilities",
+        "label": "utility synthesis",
+        "icon": "$(symbol-string)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
