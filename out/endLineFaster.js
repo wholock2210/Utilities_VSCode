@@ -37,7 +37,6 @@ exports.EndLineFaster = EndLineFaster;
 const vscode = __importStar(require("vscode"));
 function EndLineFaster(context) {
     const disposable = vscode.commands.registerTextEditorCommand('Wholock-Utilities.endLineFaster', async (editor, edit) => {
-        console.debug("chạy");
         const position = editor.selection.active;
         const lineText = editor.document.lineAt(position.line).text;
         const isNotEndLine = !lineText.trimEnd().endsWith(';');

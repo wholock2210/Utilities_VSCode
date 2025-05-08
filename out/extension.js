@@ -40,6 +40,7 @@ const splitStringOnEnter_1 = require("./splitStringOnEnter");
 const pressTaptoExitString_1 = require("./pressTaptoExitString");
 const endLineFaster_1 = require("./endLineFaster");
 const upperOrLowerString_1 = require("./upperOrLowerString");
+const showFileSize_1 = require("./YuriShaposhnikov/showFileSize");
 function activate(context) {
     console.log('Extension activated');
     (0, splitStringOnEnter_1.SplitStringOnEnter)(context);
@@ -47,6 +48,7 @@ function activate(context) {
     (0, endLineFaster_1.EndLineFaster)(context);
     context.subscriptions.push(vscode.commands.registerTextEditorCommand('Wholock-Utilities.uppercaseString', (0, upperOrLowerString_1.TransFormSelectedStrings)(str => str.toUpperCase())));
     context.subscriptions.push(vscode.commands.registerTextEditorCommand('Wholock-Utilities.lowercaseString', (0, upperOrLowerString_1.TransFormSelectedStrings)(str => str.toLowerCase())));
+    (0, showFileSize_1.ShowFileSize)(context);
 }
 function deactivate() { }
 //# sourceMappingURL=extension.js.map

@@ -3,6 +3,8 @@ import { SplitStringOnEnter } from './splitStringOnEnter';
 import {PressTabToExitString } from './pressTaptoExitString';
 import {EndLineFaster} from './endLineFaster';
 import {TransFormSelectedStrings} from './upperOrLowerString';
+import {ShowFileSize} from './YuriShaposhnikov/showFileSize';
+
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Extension activated');
@@ -15,6 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.commands.registerTextEditorCommand('Wholock-Utilities.lowercaseString',TransFormSelectedStrings(str => str.toLowerCase()))
 	);
+	ShowFileSize(context);
 }
 
 export function deactivate() { }

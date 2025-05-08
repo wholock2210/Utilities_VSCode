@@ -13,9 +13,8 @@ Gồm nhiều tiện ích khác nhau
         thành chuỗi in hoa.
         * convert all letters to lowercase : nếu trong code được bôi đen có ít nhất 1 đoạn string thì sẽ chuyển tất cả chúng    
         thành chuỗi in thường.
+- Xem Dung lượng của các file trong cửa sổ Explorer/Size (by <a href="https://github.com/yuri0sh">Yuri Shaposhnikov</a>)
 
-## Kích hoạt
 
-Extension sẽ tự động hoạt động khi mở file `.cs`.
 
 

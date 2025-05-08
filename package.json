@@ -7,13 +7,49 @@
     "vscode": "^1.99.0"
   },
   "categories": [
+    "Visualization",
     "Other"
   ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": true
+    }
+  },
   "activationEvents": [
-    "onLanguage:csharp"
+    "onLanguage:csharp",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:java",
+    "onLanguage:javascript",
+    "onLanguage:php",
+    "onLanguage:fsharp"
+  ],
+  "keywords": [
+    "size",
+    "filesize",
+    "file size",
+    "folder size",
+    "project size",
+    "size explorer",
+    "size tree",
+    "size view"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "size.sizeTree",
+          "name": "Size",
+          "when": "workbenchState != empty",
+          "contextualTitle": "Size Explorer",
+          "icon": "$(pie-chart)"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "Wholock-Utilities.helloWorld",
@@ -34,6 +70,79 @@
       {
         "command": "Wholock-Utilities.lowercaseString",
         "title": "convert all letters to lowercase"
+      },
+      {
+        "command": "size.openFilterTextView",
+        "title": "Edit filter JSON",
+        "shortTitle": "Edit",
+        "category": "Size"
+      },
+      {
+        "command": "size.refreshTree",
+        "title": "Refresh",
+        "category": "Size",
+        "icon": "$(extensions-refresh)"
+      },
+      {
+        "command": "size.modeFiles",
+        "title": "View As File List",
+        "shortTitle": "Files",
+        "category": "Size",
+        "icon": "$(explorer-view-icon)"
+      },
+      {
+        "command": "size.modeFolders",
+        "title": "View As Folder Tree",
+        "shortTitle": "Folder Tree",
+        "category": "Size",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "size.modeExtensions",
+        "title": "View As File Type Groups",
+        "shortTitle": "Extension Groups",
+        "category": "Size",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "size.setTreeType",
+        "title": "Set View As",
+        "shortTitle": "View As",
+        "category": "Size",
+        "icon": "$(list-tree)"
+      },
+      {
+        "command": "size.enableGitignore",
+        "title": "Enable .gitignore",
+        "category": "Size"
+      },
+      {
+        "command": "size.disableGitignore",
+        "title": "Disable .gitignore",
+        "category": "Size"
+      },
+      {
+        "command": "size.openSettings",
+        "title": "Settings",
+        "category": "Size"
+      },
+      {
+        "command": "size.ignorePath",
+        "title": "Add filter rule",
+        "icon": "$(dash)",
+        "category": "Size"
+      },
+      {
+        "command": "size.includePath",
+        "title": "Remove filter rule",
+        "icon": "$(close)",
+        "category": "Size"
+      },
+      {
+        "command": "size.toggleFilterMode",
+        "title": "Invert filter mode",
+        "category": "Size",
+        "icon": "$(color-mode)"
       }
     ],
     "keybindings": [
@@ -56,7 +165,7 @@
           "group": "Wholock"
         }
       ],
-      "Wholock-Utilities.Utilities":[
+      "Wholock-Utilities.Utilities": [
         {
           "command": "Wholock-Utilities.uppercaseString",
           "when": "editorHasSelection",
@@ -67,6 +176,97 @@
           "when": "editorHasSelection",
           "group": "Wholock"
         }
+      ],
+      "commandPalette": [
+        {
+          "command": "size.enableGitignore",
+          "when": "!size.gitignoreEnabled"
+        },
+        {
+          "command": "size.disableGitignore",
+          "when": "size.gitignoreEnabled"
+        },
+        {
+          "command": "size.includePath"
+        }
+      ],
+      "sizeExplorerTreeTypeSubmenu": [
+        {
+          "command": "size.modeFiles"
+        },
+        {
+          "command": "size.modeFolders"
+        },
+        {
+          "command": "size.modeExtensions"
+        }
+      ],"view/title": [
+        {
+          "command": "size.refreshTree",
+          "when": "view == size.sizeTree",
+          "group": "navigation@1"
+        },
+        {
+          "command": "size.modeFiles",
+          "group": "navigation@2",
+          "when": "false && view == size.sizeTree && size.treeType == 'extension'"
+        },
+        {
+          "command": "size.modeFolders",
+          "group": "navigation@2",
+          "when": "view == size.sizeTree && size.treeType == 'extension'"
+        },
+        {
+          "command": "size.modeExtensions",
+          "group": "navigation@2",
+          "when": "view == size.sizeTree && size.treeType == 'folder'"
+        },
+        {
+          "submenu": "sizeExplorerTreeTypeSubmenu",
+          "when": "view == size.sizeTree",
+          "group": "2_options@2"
+        },
+        {
+          "command": "size.ignorePath",
+          "when": "view == size.sizeTree",
+          "group": "2_options@1"
+        },
+        {
+          "command": "size.enableGitignore",
+          "when": "view == size.sizeTree && !size.gitignoreEnabled",
+          "group": "3_settings@1"
+        },
+        {
+          "command": "size.disableGitignore",
+          "when": "view == size.sizeTree && size.gitignoreEnabled",
+          "group": "3_settings@1"
+        },
+        {
+          "command": "size.openSettings",
+          "when": "view == size.sizeTree",
+          "group": "3_settings"
+        }
+      ],      
+      "view/item/context": [
+        {
+          "command": "size.openFilterTextView",
+          "when": "view == size.sizeTree && viewItem == ignoreRoot"
+        },
+        {
+          "command": "size.toggleFilterMode",
+          "when": "viewItem == ignoreRoot",
+          "group": "inline"
+        },
+        {
+          "command": "size.ignorePath",
+          "when": "view == size.sizeTree && (!viewItem || viewItem == extRoot)",
+          "group": "inline"
+        },
+        {
+          "command": "size.includePath",
+          "when": "view == size.sizeTree && (viewItem == ignoreRoot || viewItem == ignoreItem)",
+          "group": "inline"
+        }
       ]
     },
     "submenus": [
@@ -74,8 +274,56 @@
         "id": "Wholock-Utilities.Utilities",
         "label": "utility synthesis",
         "icon": "$(symbol-string)"
+      },
+      {
+        "id": "sizeExplorerTreeTypeSubmenu",
+        "label": "View As"
       }
-    ]
+    ],
+    "configuration":{
+      "title": "Size",
+      "properties": {
+        "size.fileSizeUnits": {
+          "type": "string",
+          "default": "1000 (kB/MB/GB/TB)",
+          "enum": [
+            "1024 (KiB/MiB/GiB/TiB)",
+            "1000 (kB/MB/GB/TB)"
+          ],
+          "description": "Toggle between base-2 (Windows, ISO/IEC 80000-13) and base-10 (SI) file size units"
+        },
+        "size.foldersFirst": {
+          "type": "boolean",
+          "default": false,
+          "description": "Give folders priority in sorting"
+        },
+        "size.fileSizeLabel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show file size before file name"
+        },
+        "size.folderContentCount": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show recursive file count for folders"
+        },
+        "size.compactFolders": {
+          "type": "boolean",
+          "default": true,
+          "description": "Compact folders that contain only one child folder"
+        },
+        "size.defaultTreeType": {
+          "type": "string",
+          "default": "folder",
+          "enum": [
+            "file",
+            "folder",
+            "extension"
+          ],
+          "description": "Default view mode (View As...)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -86,14 +334,23 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.99.0",
+    "@types/axios": "^0.9.36",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/vscode": "^1.99.0",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
-    "eslint": "^9.25.1",
-    "typescript": "^5.8.3",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wholock2210/Utilities_VSCode"
+  },
+  "publisher": "wholock",
+  "dependencies": {
+    "axios": "^1.9.0"
   }
 }
