@@ -48,7 +48,11 @@ function activate(context) {
     (0, endLineFaster_1.EndLineFaster)(context);
     context.subscriptions.push(vscode.commands.registerTextEditorCommand('Wholock-Utilities.uppercaseString', (0, upperOrLowerString_1.TransFormSelectedStrings)(str => str.toUpperCase())));
     context.subscriptions.push(vscode.commands.registerTextEditorCommand('Wholock-Utilities.lowercaseString', (0, upperOrLowerString_1.TransFormSelectedStrings)(str => str.toLowerCase())));
-    (0, showFileSize_1.ShowFileSize)(context);
+    const config = vscode.workspace.getConfiguration('Wholock-Utilities');
+    const fileSizeEnabled = config.get('enableFileSizeExplorer', true); // true mặc định
+    if (fileSizeEnabled) {
+        (0, showFileSize_1.ShowFileSize)(context);
+    }
 }
 function deactivate() { }
 //# sourceMappingURL=extension.js.map

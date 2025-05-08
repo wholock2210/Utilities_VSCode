@@ -17,7 +17,12 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.commands.registerTextEditorCommand('Wholock-Utilities.lowercaseString',TransFormSelectedStrings(str => str.toLowerCase()))
 	);
-	ShowFileSize(context);
+	const config = vscode.workspace.getConfiguration('Wholock-Utilities');
+	const fileSizeEnabled = config.get<boolean>('enableFileSizeExplorer', true); // true mặc định
+
+	if (fileSizeEnabled) {
+		ShowFileSize(context);
+	}
 }
 
 export function deactivate() { }

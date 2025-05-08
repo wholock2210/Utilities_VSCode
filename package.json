@@ -1,6 +1,6 @@
 {
   "name": "wholock-utilities",
-  "displayName": "WholockUtilities",
+  "displayName": "Utilities string manipulation",
   "description": "Split C# strings automatically, exit string by pressing Tab like vs",
   "version": "0.0.1",
   "engines": {
@@ -281,7 +281,7 @@
       }
     ],
     "configuration":{
-      "title": "Size",
+      "title": "Wholock Utilities",
       "properties": {
         "size.fileSizeUnits": {
           "type": "string",
@@ -291,6 +291,11 @@
             "1000 (kB/MB/GB/TB)"
           ],
           "description": "Toggle between base-2 (Windows, ISO/IEC 80000-13) and base-10 (SI) file size units"
+        },
+        "Wholock-Utilities.enableFileSizeExplorer": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the File Size Explorer feature"
         },
         "size.foldersFirst": {
           "type": "boolean",
