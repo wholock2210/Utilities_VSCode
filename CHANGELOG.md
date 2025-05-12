@@ -5,6 +5,18 @@
 
 ---
 
+## [0.0.8] - 2025-05-14
+
+#### 🛠️ Sửa lỗi / Fixed
+- sửa lỗi kết thúc dòng nhanh `;` nhảy ra ngoài khi ở trong một Properties
+- fixed quick line ending `;` jumping out when in a Properties
+
+## [0.0.7] - 2025-05-14
+
+## 🛠️ Sửa lỗi / Fixed
+- sửa một vài lỗi nhỏ
+- fixed some minor bugs
+
 ## [0.0.6] - 2025-05-14
 
 ## 🛠️ Sửa lỗi / Fixed
