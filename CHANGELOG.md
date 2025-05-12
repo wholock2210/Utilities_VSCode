@@ -1,41 +1,45 @@
----
-
-## ✅ CHANGELOG.md
-
-```markdown
 # Changelog
 
-Tất cả các thay đổi đáng chú ý của extension sẽ được ghi lại tại đây.
+🇻🇳 Tất cả các thay đổi đáng chú ý sẽ được ghi tại đây.  
+🇺🇸 All notable changes to this extension will be documented here.
 
 ---
 
 ## [0.0.4] – 2025-05-12
 
-### Added
-- Hỗ trợ thêm các ngôn ngữ: C, C++, F#, Java, PHP, JavaScript.
+### 🇻🇳 Thêm / Added
+- Hỗ trợ các ngôn ngữ: C, C++, F#, Java, PHP, JavaScript.
+- Support for more languages: C, C++, F#, Java, PHP, JavaScript.
 
-### Fixed
-- Sửa lỗi extension không hoạt động trong các tệp JavaScript.
+### 🛠️ Sửa lỗi / Fixed
+- Lỗi không hoạt động trong tệp JavaScript.
+- Bug: Extension didn't work in JavaScript files.
 
 ---
 
 ## [0.0.3] – 2025-05-11
 
-### Added
+### 🇻🇳 Thêm / Added
 - Nhấn `Tab` để thoát ra khỏi chuỗi hiện tại.
-- Chuột phải → Utility Synthesis: thêm tùy chọn chuyển chuỗi thành chữ hoa hoặc chữ thường.
-    - Chỉ hoạt động khi trong vùng chọn có ít nhất một chuỗi.
+- Chuột phải → Utility Synthesis: chữ hoa / chữ thường.
+
+  🇺🇸 Press `Tab` to exit a string.  
+  Right-click → Utility Synthesis: uppercase / lowercase string conversion.
 
 ---
 
 ## [0.0.2] – 2025-05-09
 
-### Added
-- Nhấn `;` ở cuối dòng chưa có dấu chấm phẩy sẽ tự động kết thúc dòng và xuống dòng mới.
+### 🇻🇳 Thêm / Added
+- Nhấn `;` ở dòng chưa có dấu `;` để tự động thêm và xuống dòng.
+
+  🇺🇸 Press `;` on lines missing semicolon to auto-terminate and move to new line.
 
 ---
 
 ## [0.0.1] – 2025-05-05
 
-### Added
-- Tự động xuống dòng và cộng chuỗi khi nhấn `Enter` bên trong một chuỗi C#.
+### 🇻🇳 Thêm / Added
+- Tự động chia chuỗi khi nhấn `Enter` bên trong chuỗi C#.
+
+  🇺🇸 Auto-split C# strings when pressing `Enter` inside the string.
