@@ -1,0 +1,116 @@
+{
+  "name": "wholockutilities",
+  "displayName": "Utilities String Manipulation",
+  "description": "Collection of string manipulation utilities",
+  "version": "0.0.4",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:csharp",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:java",
+    "onLanguage:javascript",
+    "onLanguage:php",
+    "onLanguage:fsharp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "WholockUtilities.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "Wholock-Utilities.endLineFaster",
+        "title": "auto end line when pressed ;"
+      },
+      {
+        "command": "Wholock-Utilities.smartTab",
+        "title": "pressing Tab to exit string"
+      },
+      {
+        "command": "Wholock-Utilities.uppercaseString",
+        "title": "convert all letters to uppercase"
+      },
+      {
+        "command": "Wholock-Utilities.lowercaseString",
+        "title": "convert all letters to lowercase"
+      }
+    ],
+    "keybindings":[
+      {
+        "command": "Wholock-Utilities.endLineFaster",
+        "key": ";",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "Wholock-Utilities.smartTab",
+        "key": "Tab",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "Wholock-Utilities.Utilities",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        }
+      ],
+      "Wholock-Utilities.Utilities": [
+        {
+          "command": "Wholock-Utilities.uppercaseString",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        },
+        {
+          "command": "Wholock-Utilities.lowercaseString",
+          "when": "editorHasSelection",
+          "group": "Wholock"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "Wholock-Utilities.Utilities",
+        "label": "utility synthesis",
+        "icon": "$(symbol-string)"
+      },
+      {
+        "id": "sizeExplorerTreeTypeSubmenu",
+        "label": "View As"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wholock2210/Utilities_VSCode"
+  },
+  "publisher": "wholock"
+}
