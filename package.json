@@ -112,5 +112,6 @@
     "type": "git",
     "url": "https://github.com/wholock2210/Utilities_VSCode"
   },
-  "publisher": "wholock"
+  "publisher": "wholock",
+  "icon": "icon.png"
 }

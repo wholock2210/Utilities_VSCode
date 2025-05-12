@@ -19,7 +19,7 @@ Tất cả các thay đổi đáng chú ý của extension sẽ được ghi l�
 
 ---
 
-## [0.0.3] – 2025-05-10
+## [0.0.3] – 2025-05-11
 
 ### Added
 - Nhấn `Tab` để thoát ra khỏi chuỗi hiện tại.
@@ -28,7 +28,7 @@ Tất cả các thay đổi đáng chú ý của extension sẽ được ghi l�
 
 ---
 
-## [0.0.2] – 2025-05-07
+## [0.0.2] – 2025-05-09
 
 ### Added
 - Nhấn `;` ở cuối dòng chưa có dấu chấm phẩy sẽ tự động kết thúc dòng và xuống dòng mới.
