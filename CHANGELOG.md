@@ -4,6 +4,11 @@
 🇺🇸 All notable changes to this extension will be documented here.
 
 ---
+## [0.0.5] - 2025-05-13
+
+### 🇻🇳 Thêm / Added
+- thêm mô tả tiếng anh (nhìn cho nó chuyên nghiệp)
+- add english description
 
 ## [0.0.4] – 2025-05-12
 
