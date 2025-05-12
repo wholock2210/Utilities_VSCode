@@ -4,6 +4,13 @@
 🇺🇸 All notable changes to this extension will be documented here.
 
 ---
+
+## [0.0.6] - 2025-05-14
+
+## 🛠️ Sửa lỗi / Fixed
+- khắc phục vấn đề hộp thoại nhắc lệnh không hoạt động khi nhấn `tab`
+- fix issue where command prompt dialog doesn't work when pressing `tab`
+
 ## [0.0.5] - 2025-05-13
 
 ### 🇻🇳 Thêm / Added
