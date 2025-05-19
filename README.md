@@ -60,3 +60,5 @@
    - 🇺🇸 Select a code block with strings → right-click → Utility Synthesis.
 
 ---
+
+Project cua nhom KHOA - LOC
