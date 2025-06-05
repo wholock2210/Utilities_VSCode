@@ -38,6 +38,7 @@
 - PHP
 - C / C++
 - F#
+- Python
 
 ---
 

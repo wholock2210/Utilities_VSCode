@@ -4,6 +4,21 @@
 🇺🇸 All notable changes to this extension will be documented here.
 
 ---
+
+## [0.1.0] - 2025-06-05
+
+##### 🛠️ Sửa lỗi / Fixed
+- sửa lỗi dòng nằm trên vòng lặp
+- sửa một vài lỗi nhỏ
+- fix error line inside loop
+- fix some minor bugs
+
+### 🇻🇳 Thêm / Added
+- format lại dòng khi tách chuỗi
+- hỗ trợ thêm ký tự `'` cho các ngôn ngữ sử dụng
+- reformat line when splitting string
+- add support for `'` character for used languages
+
 ## [0.0.9] - 2025-05-19
 - them ten nhom
 

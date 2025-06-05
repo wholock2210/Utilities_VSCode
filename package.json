@@ -2,7 +2,7 @@
   "name": "wholock-utilities",
   "displayName": "Utilities String Manipulation",
   "description": "Collection of string manipulation utilities",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -18,7 +18,8 @@
     "onLanguage:java",
     "onLanguage:javascript",
     "onLanguage:php",
-    "onLanguage:fsharp"
+    "onLanguage:fsharp",
+    "onLanguage:python"
   ],
   "main": "./out/extension.js",
   "contributes": {
