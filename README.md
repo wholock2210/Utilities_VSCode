@@ -1,6 +1,6 @@
 # Utilities String Manipulation
 
-🇻🇳 Một tiện ích mở rộng dành cho Visual Studio Code nhằm nâng cao trải nghiệm viết mã, đặc biệt là với các chuỗi trong C#, JavaScript, và các ngôn ngữ khác. Extension cung cấp nhiều công cụ hỗ trợ xử lý chuỗi nhanh chóng và tiện lợi.
+🇻🇳 Một tiện ích mở rộng dành cho Visual Studio Code nhằm nâng cao trải nghiệm viết Code, đặc biệt là với các chuỗi trong C#, JavaScript, và các ngôn ngữ khác. Extension cung cấp nhiều công cụ hỗ trợ xử lý chuỗi nhanh chóng và tiện lợi.
 
 🇺🇸 A Visual Studio Code extension that enhances coding experience, especially with string manipulation in C#, JavaScript, and other languages. It offers a set of smart string utilities for fast and convenient development.
 
