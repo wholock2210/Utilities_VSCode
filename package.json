@@ -2,7 +2,7 @@
   "name": "wholock-utilities",
   "displayName": "Utilities String Manipulation",
   "description": "Collection of string manipulation utilities",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -25,8 +25,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "WholockUtilities.helloWorld",
-        "title": "Hello World"
+        "command": "Wholock-Utilities.ShiftTabGoToBac",
+        "title": "Wholock: Shift Tab Go To Back"
       },
       {
         "command": "Wholock-Utilities.endLineFaster",
@@ -54,7 +54,12 @@
       {
         "command": "Wholock-Utilities.smartTab",
         "key": "Tab",
-        "when": "editorTextFocus && !suggestWidgetVisible"
+        "when": "editorTextFocus && !suggestWidgetVisible && !editorHasSnippetCompletions && !inSnippetMode"
+      },
+      {
+        "key": "shift+tab",
+        "command": "Wholock-Utilities.ShiftTabGoToBack",
+        "when": "editorTextFocus && !suggestWidgetVisible && !editorHasSnippetCompletions && !inSnippetMode"
       }
     ],
     "menus": {

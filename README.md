@@ -20,6 +20,18 @@
 
   🇺🇸 **Quick end-of-line**: Press `;` to auto-terminate a line (if it doesn't already end with `;`) and move to the next line.
 
+- 🇻🇳 **di chuyển đến ký tự kế tiếp**: nhấn `Tab` để di chuyển đến ký tự kế tiếp (nếu không ở trong một chuỗi).
+
+  🇺🇸 **move to next character**: press `Tab` to move to the next character (if not in a string).
+
+- 🇻🇳 **Lùi ra chuỗi hiện tại**: nhấn `Shift` + `Tab` để lùi ra khỏi chuỗi hiện tại.
+
+  🇺🇸 **Backspace current string**: press `Shift` + `Tab` to backspace current string.
+
+- 🇻🇳 **Lùi lại ký tự kế tiếp**: nhấn `Shift` + `Tab` để lùi lại ký tự kế tiếp (nếu không ở trong một chuỗi).
+
+  🇺🇸  **Go back to next character**: press `Shift` + `Tab` to go back to the next character (if not in a string).
+
 - 🇻🇳 **Chuột phải → Utility Synthesis**:
     - **Convert to UPPERCASE**: Chuyển tất cả các chuỗi trong vùng chọn thành chữ in hoa.
     - **Convert to lowercase**: Chuyển tất cả các chuỗi trong vùng chọn thành chữ thường.
@@ -49,8 +61,10 @@
    - 🇺🇸 Place cursor inside a string and press `Enter`.
 
 2. **Thoát khỏi chuỗi / Exit string**
-   - 🇻🇳 Nhấn `Tab` ở cuối chuỗi.
-   - 🇺🇸 Press `Tab` at the end of the string.
+   - 🇻🇳 Nhấn `Tab` ở trong chuỗi.
+   - 🇺🇸 Press `Tab` in the string.
+   - 🇻🇳 Nhấn `Shift` + `Tab` ở trong chuỗi.
+   - 🇺🇸 Press `Shift` + `Tab` in the string.
 
 3. **Kết thúc dòng / End line**
    - 🇻🇳 Nhấn `;` để kết thúc dòng chưa có `;`.
@@ -59,7 +73,10 @@
 4. **Chuyển chữ hoa/thường / Case transform**
    - 🇻🇳 Bôi đen đoạn code có chứa chuỗi → chuột phải → Utility Synthesis.
    - 🇺🇸 Select a code block with strings → right-click → Utility Synthesis.
+5. **Di chuyển đến ký tự kế tiếp / Move to next character**
+   - 🇻🇳 Nhấn `Tab`.
+   - 🇺🇸 Press `Tab`.
+   - 🇻🇳 Nhấn `Shift` + `Tab`.
+   - 🇺🇸 Press `Shift` + `Tab`.
 
 ---
-
-Project cua nhom KHOA - LOC

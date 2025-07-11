@@ -4,23 +4,34 @@
 🇺🇸 All notable changes to this extension will be documented here.
 
 ---
+## [0.1.1] - 2025-07-11
+
+### 🇻🇳 Thêm / Added
+- thêm chức năng nhấn `tab` để di chuyển đến ký tự kế tiếp
+- add function to press `tab` to move to next character
+- thêm chức năng nhấn `shift` + `tab` để lùi ra chuỗi hiện tại
+- thêm chức năng nhấn `shift` + `tab` để lùi lại ký tự kế tiếp
+
+- add function to press `tab` to move to next character
+- add function to press `shift` + `tab` to move back to current string
+- add function to press `shift` + `tab` to move back to next character
 
 ## [0.1.0] - 2025-06-05
+
+### 🇻🇳 Thêm / Added
+- format lại dòng khi tách chuỗi
+- hỗ trợ thêm ký tự `'` cho các ngôn ngữ sử dụng
+
+- reformat line when splitting string
+- add support for `'` character for used languages
+
+## [0.0.9] - 2025-06-05
 
 ##### 🛠️ Sửa lỗi / Fixed
 - sửa lỗi dòng nằm trên vòng lặp
 - sửa một vài lỗi nhỏ
 - fix error line inside loop
 - fix some minor bugs
-
-### 🇻🇳 Thêm / Added
-- format lại dòng khi tách chuỗi
-- hỗ trợ thêm ký tự `'` cho các ngôn ngữ sử dụng
-- reformat line when splitting string
-- add support for `'` character for used languages
-
-## [0.0.9] - 2025-05-19
-- them ten nhom
 
 ## [0.0.8] - 2025-05-14
 
