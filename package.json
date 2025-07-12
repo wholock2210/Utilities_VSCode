@@ -2,7 +2,7 @@
   "name": "wholock-utilities",
   "displayName": "Utilities String Manipulation",
   "description": "Collection of string manipulation utilities",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -43,6 +43,10 @@
       {
         "command": "Wholock-Utilities.lowercaseString",
         "title": "convert all letters to lowercase"
+      },
+      {
+        "command": "Wholock-Utilities.insertRealTab",
+        "title": "bring back true tab function \\t"
       }
     ],
     "keybindings":[
@@ -60,6 +64,11 @@
         "key": "shift+tab",
         "command": "Wholock-Utilities.ShiftTabGoToBack",
         "when": "editorTextFocus && !suggestWidgetVisible && !editorHasSnippetCompletions && !inSnippetMode"
+      },
+      {
+        "key": "ctrl+`",
+        "command": "Wholock-Utilities.insertRealTab",
+        "when": "editorTextFocus"
       }
     ],
     "menus": {

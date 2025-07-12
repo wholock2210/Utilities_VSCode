@@ -5,6 +5,7 @@ import { PressTabToExitString } from './pressTaptoExitString';
 import { SplitStringOnEnter } from './splitStringOnEnter';
 import { TransFormSelectedStrings } from './upperOrLowerString';
 import {PressShiftTabToExitString} from './PressShiftTabGoToBack';
+import {InsertRealTab} from './InsertRealTab';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -12,6 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 	PressTabToExitString(context);
 	SplitStringOnEnter(context);
 	PressShiftTabToExitString(context);
+	InsertRealTab(context);
 	context.subscriptions.push(
 		vscode.commands.registerTextEditorCommand('Wholock-Utilities.uppercaseString',TransFormSelectedStrings(str => str.toUpperCase()))
 	);

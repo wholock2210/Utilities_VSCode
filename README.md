@@ -40,6 +40,10 @@
     - Convert selected strings to UPPERCASE.
     - Convert selected strings to lowercase.
 
+## Lưu ý / Note
+
+- Chức năng tab \t hiện tại được chuyển qua tổ hợp phím `Ctrl` + `~` (nút phía trên phím tab)
+- The current tab function is toggled by the key combination `Ctrl` + `~` (the button above the tab key)
 ---
 
 ## 🧠 Hỗ trợ ngôn ngữ / Language Support
