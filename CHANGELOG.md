@@ -4,6 +4,12 @@
 🇺🇸 All notable changes to this extension will be documented here.
 
 ---
+## [0.1.3] - 2026-03-10
+
+### 🇻🇳 Cập nhật / 🇺🇸 Updated
+- Nâng cấp hỗ trợ VSCode engine từ ^1.70.0 lên ^1.95.0
+- Updated VSCode engine support from ^1.70.0 to ^1.95.0
+
 ## [0.1.2] - 2025-07-12
 
 ### 🇻🇳 Thêm / 🇺🇸 Added

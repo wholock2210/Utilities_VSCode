@@ -2,9 +2,9 @@
   "name": "wholock-utilities",
   "displayName": "Utilities String Manipulation",
   "description": "Collection of string manipulation utilities",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.95.0"
   },
   "categories": [
     "Programming Languages",
